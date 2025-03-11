@@ -1,6 +1,11 @@
-// REMEMBER TO PSEUDOCODE
 const pad = (array, minSize, value=null) => {
-    // code goes here : ) 
-}
+    if (minSize < 0 || array.length > minSize) {
+        return array
+    } else {
+        while (array.length < minSize) {
+            array.push(value)
+        }
+    }
+};
 
-exports.pad = pad;
+module.exports = {pad};
